@@ -101,6 +101,6 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.listen(9002, "https://explore-me-api.vercel.app/", () => {
+app.listen(9002, "https://explore-me-api.vercel.app", () => {
   console.log("BE started at port 9002");
 });

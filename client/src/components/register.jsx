@@ -46,7 +46,7 @@ const Register = () => {
       password === reEnterPassword
     ) {
       axios
-        .post("https://explore-me-api.vercel.app/register", user)
+        .post("https://explore-me-api.vercel.app:9002/register", user)
         .then((res) => {
           alert(res.data.message);
           navigate("/login");
