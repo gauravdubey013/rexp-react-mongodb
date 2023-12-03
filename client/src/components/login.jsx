@@ -25,7 +25,7 @@ const Login = ({ setLoginUser }) => {
 
   const login = (e) => {
     e.preventDefault();
-    axios.post("https://explore-me-api.vercel.app:9002/login", user).then((res) => {
+    axios.post("https://explore-me-api.vercel.app/login", user).then((res) => {
       alert(res.data.message);
       setLoginUser(res.data.user);
       navigate("/");
