@@ -9,15 +9,13 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(
   cors({
-    origin: ["https://exp.vercel.app/"],
+    origin: ["https://explore-me.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true,
   })
 );
 
 mongoose.connect(
-  // "mongodb+srv://exp:exp12345@clusterexp.xw5sehz.mongodb.net/expdb?retryWrites=true&w=majority",
-  // "mongodb+srv://srizaaakanksha:aakanksha@clusterexplore.mp2fje4.mongodb.net/exploredb?retryWrites=true&w=majority",
   process.env.MONGO_URL,
   {
     useNewUrlParser: true,
@@ -103,6 +101,6 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.listen(9002, () => {
-  console.log("BE started at port 9002");
-});
+// app.listen(9002, () => {
+//   console.log("BE started at port 9002");
+// });
