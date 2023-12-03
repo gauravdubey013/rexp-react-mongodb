@@ -7,7 +7,13 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://exp.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true,
+  })
+);
 
 mongoose.connect(
   // "mongodb+srv://exp:exp12345@clusterexp.xw5sehz.mongodb.net/expdb?retryWrites=true&w=majority",
